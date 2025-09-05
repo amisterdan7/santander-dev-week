@@ -9,6 +9,7 @@ public class Card {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     @Column(unique = true)
     private String cardNumber;
@@ -30,5 +31,13 @@ public class Card {
 
     public void setCardlimit(BigDecimal cardlimit) {
         this.cardlimit = cardlimit;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 }
