@@ -20,13 +20,13 @@ public class UserConroller {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping({"/id"})
     public ResponseEntity<User> findById(@PathVariable Long id) {
         var user = userService.findById(id);
         return ResponseEntity.ok(user);
     }
 
-    @PostMapping("/id")
+    @PostMapping
     public ResponseEntity<User> save(@RequestBody User userTocreate) {
        var userCreated = userService.create(userTocreate);
         URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
