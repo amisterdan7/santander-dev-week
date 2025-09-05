@@ -11,24 +11,24 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     @Column(unique = true)
-    private String Number;
+    private String cardNumber;
 
-    @Column(name = "available_limit", scale = 13, precision = 2)
-    private BigDecimal limit;
+    @Column(name = "available_limit", precision = 13, scale = 2)
+    private BigDecimal cardlimit;
 
-    public String getNumber() {
-        return Number;
+    public String getCardNumber() {
+        return cardNumber;
     }
 
-    public void setNumber(String number) {
-        Number = number;
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
     }
 
-    public BigDecimal getLimit() {
-        return limit;
+    public BigDecimal getCardlimit() {
+        return cardlimit;
     }
 
-    public void setLimit(BigDecimal limit) {
-        this.limit = limit;
+    public void setCardlimit(BigDecimal cardlimit) {
+        this.cardlimit = cardlimit;
     }
 }
