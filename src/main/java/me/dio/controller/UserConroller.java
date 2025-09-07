@@ -20,7 +20,7 @@ public class UserConroller {
         this.userService = userService;
     }
 
-    @GetMapping({"/id"})
+    @GetMapping({"/{id}"})
     public ResponseEntity<User> findById(@PathVariable Long id) {
         var user = userService.findById(id);
         return ResponseEntity.ok(user);
