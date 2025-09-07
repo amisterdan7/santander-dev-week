@@ -5,9 +5,10 @@ spring:
     password: mmJNbklWXOLJZmLejoNDwEcoyQKTwPSY
   jpa:
     hibernate:
-      ddl-auto: create
+      # 'create' irá apagar e recriar as tabelas na primeira execução.
+      ddl-auto: validate
     show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-    
+
